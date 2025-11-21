@@ -1,0 +1,142 @@
+/* ===== Base Styles ===== */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(15px) saturate(180%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.2);
+  border: 1px solid rgba(0, 255, 200, 0.3);
+}
+
+/* Container for search input + button */
+.search-wrapper {
+  display: flex;
+  align-items: center; /* vertically center input and button */
+  gap: 10px; /* space between input and button */
+  margin-bottom: 20px; /* optional spacing below */
+}
+
+/* Search Input */
+#searchBox {
+  flex: 1; /* input takes remaining space */
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  box-shadow: inset 0 0 10px rgba(0, 255, 200, 0.2);
+  transition: 0.3s;
+}
+
+/* Search Button */
+#searchBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(0, 255, 200, 0.1);
+  color: #0ff;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px rgba(0, 255, 200, 0.3);
+  transition: 0.3s, transform 0.2s;
+}
+
+#searchBtn:hover {
+  background: rgba(0, 255, 200, 0.25);
+  box-shadow: inset 0 0 15px rgba(0, 255, 200, 0.5), 0 0 10px rgba(0, 255, 200, 0.6);
+  transform: translateY(-2px);
+}
+
+#searchBtn:active {
+  transform: translateY(0);
+  box-shadow: inset 0 0 12px rgba(0, 255, 200, 0.7);
+}
+
+
+
+/* ===== News Items ===== */
+.news-item {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px) saturate(150%);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 255, 200, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.5);
+}
+
+.news-item h3 {
+  margin: 0 0 5px 0;
+  color: #0ff;
+}
+
+.news-item a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+.news-item p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+/* Make the page take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content grows to fill space */
+.content {
+  flex: 1;
+}
+
+/* Footer styling */
+footer.powered-by {
+  text-align: center;
+  padding: 10px 0;
+  background: #f5f5f5;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+footer.powered-by .tech-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+footer.powered-by .tech-stack img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
